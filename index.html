@@ -26,7 +26,7 @@
             <link rel="stylesheet" href="assets/css/travo-custom.css">
    </head>
 
-   <body>
+   <body class="homepage">
     <!-- Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -50,9 +50,15 @@
                             <div class="col-xl-2 col-lg-2 col-md-1">
                                 <div class="logo">
                                     <!-- logo-1 -->
-                                    <a href="index.html" class="big-logo"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    <a href="index.html" class="big-logo">
+                                        <img src="travo.png" alt="Travo Group" style="height: 60px; width: auto; margin-right: 10px;">
+                                        <span style="font-weight: bold; color: #ffffff; font-size: 24px; vertical-align: middle;">Travo</span>
+                                    </a>
                                     <!-- logo-2 -->
-                                    <a href="index.html" class="small-logo"><img src="assets/img/logo/loder-logo.png" alt=""></a>
+                                    <a href="index.html" class="small-logo">
+                                        <img src="travo.png" alt="Travo Group" style="height: 50px; width: auto; margin-right: 8px;">
+                                        <span style="font-weight: bold; color: #ffffff; font-size: 20px; vertical-align: middle;">Travo</span>
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-xl-8 col-lg-8 col-md-8">
@@ -66,9 +72,9 @@
                                                     <li><a href="who-we-are/leadership.html">Leadership</a></li>
                                                     <li><a href="who-we-are/values.html">Values & Ethics</a></li>
                                                     <li><a href="who-we-are/safety.html">Safety & Quality (HSE)</a></li>
-                                                    <li><a href="#">Innovation</a></li>
-                                                    <li><a href="#">Diversity & Inclusion</a></li>
-                                                    <li><a href="#">Community & Academia</a></li>
+                                                    <li><a href="who-we-are/innovation.html">Innovation</a></li>
+                                                    <li><a href="who-we-are/diversity.html">Diversity & Inclusion</a></li>
+                                                    <li><a href="who-we-are/community.html">Community & Academia</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="#">Our Work</a>
@@ -76,7 +82,7 @@
                                                     <li class="mega-column">
                                                         <h4>Markets</h4>
                                                         <ul>
-                                                            <li><a href="#">Transportation</a></li>
+                                                            <li><a href="markets/transportation.html">Transportation</a></li>
                                                             <li><a href="#">Water & Wastewater</a></li>
                                                             <li><a href="#">Marine & Coastal</a></li>
                                                             <li><a href="#">Energy & Oilfield</a></li>
@@ -209,8 +215,13 @@
         <!-- slider Area Start-->
         <div class="slider-area ">
             <div class="slider-active">
-                <div class="single-slider  hero-overly slider-height d-flex align-items-center" data-background="assets/img/hero/h1_hero.jpg">
-                    <div class="container">
+                <div class="single-slider hero-overly slider-height d-flex align-items-center video-hero" style="position: relative; overflow: hidden;">
+                    <video autoplay muted loop id="hero-video" style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1; transform: translateX(-50%) translateY(-50%); object-fit: cover;">
+                        <source src="con2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 1;"></div>
+                    <div class="container" style="position: relative; z-index: 2;">
                         <div class="row">
                             <div class="col-lg-11">
                                 <div class="hero__caption">
@@ -265,18 +276,8 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="properties__button">
-                                <!--Nav Button  -->
-                                <nav>
-                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">All Projects</a>
-                                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Marine & Coastal</a>
-                                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Transportation</a>
-                                        <a class="nav-item nav-link" id="nav-last-tab" data-toggle="tab" href="#nav-last" role="tab" aria-controls="nav-last" aria-selected="false">Water & Wastewater</a>
-                                        <a class="nav-item nav-link" id="nav-technology" data-toggle="tab" href="#nav-techno" role="tab" aria-controls="nav-techno" aria-selected="false">Energy</a>
-                                    </div>
-                                </nav>
-                                <!--End Nav Button  -->
+                            <div class="properties__button text-right">
+                                <a href="#" class="btn btn-primary">View All Projects</a>
                             </div>
                         </div>
                     </div>
@@ -1010,7 +1011,7 @@
                                 <div class="single-footer-caption mb-30">
                                     <!-- logo -->
                                     <div class="footer-logo">
-                                        <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                        <a href="index.html"><img src="travo.png" alt="Travo Group" style="height: 60px; width: auto; margin-right: 10px;"></a>
                                     </div>
                                     <div class="footer-tittle">
                                         <div class="footer-pera">
