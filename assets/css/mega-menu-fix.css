@@ -1,0 +1,225 @@
+/* Mega Menu Styling Fixes for Travo Group Navigation */
+
+/* Fix mega menu visibility and styling */
+.main-menu ul.submenu.mega-menu {
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 600px;
+    max-width: 800px;
+    padding: 20px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+/* Show mega menu on hover */
+.main-menu nav ul li:hover > ul.submenu.mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Mega menu columns */
+.main-menu ul.submenu.mega-menu .mega-column {
+    flex: 1;
+    min-width: 200px;
+    padding: 0 15px;
+    list-style: none;
+}
+
+/* Mega menu column headings */
+.main-menu ul.submenu.mega-menu .mega-column h4 {
+    color: #ff5f13;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ff5f13;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Mega menu nested lists */
+.main-menu ul.submenu.mega-menu .mega-column ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Mega menu links */
+.main-menu ul.submenu.mega-menu .mega-column ul li {
+    margin-bottom: 8px;
+    list-style: none;
+}
+
+.main-menu ul.submenu.mega-menu .mega-column ul li a {
+    color: #464242;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 5px 0;
+    display: block;
+    transition: color 0.3s ease;
+    line-height: 1.4;
+}
+
+.main-menu ul.submenu.mega-menu .mega-column ul li a:hover {
+    color: #ff5f13;
+    padding-left: 5px;
+}
+
+/* View All Partners link styling */
+.main-menu ul.submenu.mega-menu .view-all-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #ff5f13;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid #ff5f13;
+    padding: 8px 15px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.main-menu ul.submenu.mega-menu .view-all-link:hover {
+    background: #ff5f13;
+    color: #ffffff;
+}
+
+/* Regular submenu styling improvements */
+.main-menu ul.submenu:not(.mega-menu) {
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    min-width: 220px;
+    padding: 15px 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+/* Show regular submenu on hover */
+.main-menu nav ul li:hover > ul.submenu:not(.mega-menu) {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Regular submenu links */
+.main-menu ul.submenu:not(.mega-menu) li a {
+    color: #464242;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 8px 20px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.main-menu ul.submenu:not(.mega-menu) li a:hover {
+    color: #ff5f13;
+    background: rgba(255, 95, 19, 0.1);
+    padding-left: 25px;
+}
+
+/* Third level submenu styling */
+.main-menu ul.submenu li ul.submenu {
+    top: 0;
+    left: 100%;
+    margin-left: 1px;
+}
+
+/* Utility navigation styling */
+.utility-nav {
+    margin-left: 20px;
+}
+
+.header-utility {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-utility li {
+    margin-left: 15px;
+    list-style: none;
+}
+
+.header-utility .search-icon a {
+    color: #464242;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.header-utility .search-icon a:hover {
+    color: #ff5f13;
+}
+
+.header-utility .lang-select {
+    border: 1px solid #e8e8e8;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #464242;
+    background: #ffffff;
+    border-radius: 3px;
+}
+
+.header-utility .portal-btn {
+    background: #ff5f13;
+    color: #ffffff;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: background 0.3s ease;
+}
+
+.header-utility .portal-btn:hover {
+    background: #e54811;
+    color: #ffffff;
+}
+
+/* Mobile navigation fixes */
+@media (max-width: 991px) {
+    .main-menu ul.submenu.mega-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: block;
+        min-width: auto;
+        max-width: none;
+        box-shadow: none;
+        border: none;
+        padding: 10px 0;
+    }
+
+    .main-menu ul.submenu.mega-menu .mega-column {
+        flex: none;
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid #e8e8e8;
+    }
+
+    .main-menu ul.submenu.mega-menu .mega-column:last-child {
+        border-bottom: none;
+    }
+}
