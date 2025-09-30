@@ -2,13 +2,13 @@ html body .header-area,
 html body .header-area.header-transparent,
 html body header .header-area,
 html body header.header-area {
-    background: rgba(70, 66, 66, 0.9) !important;
+    background: transparent !important;
 }
 
 html body .header-sticky.sticky-bar.sticky,
 html body header.header-sticky.sticky-bar.sticky,
 html body .sticky-bar.sticky {
-    background: #464242 !important;
+    background: transparent !important;
 }
 
 html body .main-header .header-bottom,
@@ -20,6 +20,8 @@ html body .main-menu ul > li > a,
 html body header .main-menu ul > li > a,
 html body nav ul li a {
     color: #ffffff !important;
+    font-size: 16px !important;
+    padding: 26px 23px !important;
 }
 
 html body .main-menu ul > li:hover > a,
@@ -98,18 +100,18 @@ html body header .header-area .header-top {
     html body .header-area.header-transparent,
     html body header .header-area,
     html body header.header-area {
-        background: #464242 !important;
+        background: transparent !important;
     }
 }
 
 @media (min-width: 992px) {
     html body .header-area,
     html body header .header-area {
-        background: rgba(70, 66, 66, 0.9) !important;
+        background: transparent !important;
     }
 
     html body .header-area.header-transparent,
     html body header.header-area.header-transparent {
-        background: rgba(70, 66, 66, 0.85) !important;
+        background: transparent !important;
     }
 }

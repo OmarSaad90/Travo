@@ -1,5 +1,14 @@
 /* Homepage Content Styling for Travo Group */
 
+/* Reduce gap between Featured Projects and Our Capabilities */
+.project-area.section-padding30 {
+    padding-bottom: 60px !important;
+}
+
+.services-area1.section-padding30 {
+    padding-top: 60px !important;
+}
+
 /* Hero Section Enhancements */
 .hero__caption .hero-text1 span {
     font-size: 18px;
