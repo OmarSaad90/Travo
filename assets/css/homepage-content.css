@@ -292,3 +292,63 @@
         font-size: 12px;
     }
 }
+
+/* Safety & Quality Section - Reduce Size on Desktop */
+.safety-quality-area.section-padding30 {
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+}
+
+/* Make all content inside Safety & Quality section smaller */
+.safety-quality-area .section-tittle h2 {
+    font-size: 36px !important;
+    margin-bottom: 25px !important;
+}
+
+.safety-quality-area .section-tittle .back-text {
+    font-size: 70px !important;
+}
+
+.safety-quality-area .section-tittle {
+    margin-bottom: 35px !important;
+}
+
+.safety-quality-area .metric-item {
+    padding: 25px 18px !important;
+    margin-bottom: 18px !important;
+}
+
+.safety-quality-area .metric-item .metric-icon i {
+    font-size: 28px !important;
+}
+
+.safety-quality-area .metric-item h4 {
+    font-size: 18px !important;
+    margin: 12px 0 6px 0 !important;
+}
+
+.safety-quality-area .metric-item p {
+    font-size: 14px !important;
+    margin: 0 !important;
+}
+
+.safety-quality-area .safety-statement {
+    margin-top: 30px !important;
+}
+
+.safety-quality-area .safety-statement p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+}
+
+.safety-quality-area .safety-icon-large i {
+    font-size: 95px !important;
+}
+
+.safety-quality-area .safety-badges {
+    margin-top: 30px !important;
+}
+
+.safety-quality-area .safety-badges img {
+    max-width: 170px !important;
+}

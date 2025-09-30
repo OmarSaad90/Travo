@@ -556,6 +556,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Responsive Design */
+
+/* Fix for 992-1199px - Reset negative margins that break left alignment */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .hero-btn {
+        margin-left: 0 !important;
+    }
+
+    .hero__caption h1 {
+        margin-left: 0 !important;
+    }
+
+    .hero-text1 span {
+        margin-left: 0 !important;
+    }
+
+    .stock-text h2 {
+        margin-left: 0 !important;
+    }
+
+    .hero-stats {
+        margin-left: 0 !important;
+    }
+}
+
 @media (max-width: 991px) {
     .hero__caption h1 {
         font-size: 3rem;
