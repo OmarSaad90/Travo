@@ -1,0 +1,1153 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Our Projects - Travo Group | Construction Excellence Across the Middle East</title>
+        <meta name="description" content="Explore Travo Group's portfolio of 500+ projects across Lebanon, Oman, UAE, and Qatar. From transportation to marine construction, discover our engineering excellence.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="manifest" href="site.webmanifest">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+		<!-- CSS here -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/slicknav.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="assets/css/themify-icons.css">
+        <link rel="stylesheet" href="assets/css/slick.css">
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <link rel="stylesheet" href="assets/css/travo-clean.css">
+
+        <style>
+            /* Projects Page Custom Styles */
+            .projects-hero {
+                background: linear-gradient(135deg, #464242 0%, #fe5533 100%);
+                padding: 120px 0 80px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .projects-hero h1 {
+                color: #ffffff;
+                font-size: 3rem;
+                font-weight: 700;
+                margin-bottom: 15px;
+            }
+
+            .projects-hero p {
+                color: rgba(255, 255, 255, 0.9);
+                font-size: 1.2rem;
+            }
+
+            /* Filter Section */
+            .filter-section {
+                background: #ffffff;
+                padding: 30px 0;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+                position: sticky;
+                top: 0;
+                z-index: 100;
+            }
+
+            .filter-controls {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .filter-group {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .filter-group label {
+                color: #464242;
+                font-weight: 600;
+                font-size: 14px;
+                margin: 0;
+            }
+
+            .filter-select {
+                padding: 10px 15px;
+                border: 2px solid #fdeeea;
+                border-radius: 8px;
+                background: #ffffff;
+                color: #464242;
+                font-size: 14px;
+                min-width: 180px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .filter-select:focus {
+                outline: none;
+                border-color: #fe5533;
+            }
+
+            .filter-select:hover {
+                border-color: #fe5533;
+            }
+
+            .search-box {
+                position: relative;
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .search-box input {
+                width: 100%;
+                padding: 10px 15px 10px 40px;
+                border: 2px solid #fdeeea;
+                border-radius: 8px;
+                font-size: 14px;
+                transition: all 0.3s ease;
+            }
+
+            .search-box input:focus {
+                outline: none;
+                border-color: #fe5533;
+            }
+
+            .search-box i {
+                position: absolute;
+                left: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #fe5533;
+            }
+
+            .reset-filters {
+                padding: 10px 20px;
+                background: #fe5533;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                font-size: 14px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .reset-filters:hover {
+                background: #d9c487;
+                transform: translateY(-2px);
+            }
+
+            /* Projects Grid */
+            .projects-grid-section {
+                padding: 60px 0;
+                background: #fafafa;
+                min-height: 600px;
+            }
+
+            .projects-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+                gap: 30px;
+                margin-bottom: 40px;
+            }
+
+            .project-card {
+                background: #ffffff;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+                transition: all 0.3s ease;
+                cursor: pointer;
+                position: relative;
+            }
+
+            .project-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            }
+
+            .project-card-img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+            }
+
+            .project-card:hover .project-card-img {
+                transform: scale(1.05);
+            }
+
+            .project-card-body {
+                padding: 25px;
+            }
+
+            .project-card-meta {
+                display: flex;
+                gap: 10px;
+                margin-bottom: 12px;
+                flex-wrap: wrap;
+            }
+
+            .project-tag {
+                padding: 5px 12px;
+                background: #fdeeea;
+                color: #fe5533;
+                border-radius: 20px;
+                font-size: 12px;
+                font-weight: 600;
+            }
+
+            .project-location {
+                padding: 5px 12px;
+                background: #fe5533;
+                color: white;
+                border-radius: 20px;
+                font-size: 12px;
+                font-weight: 600;
+            }
+
+            .project-card-title {
+                color: #464242;
+                font-size: 1.3rem;
+                font-weight: 700;
+                margin-bottom: 12px;
+                line-height: 1.3;
+            }
+
+            .project-card-desc {
+                color: #666666;
+                font-size: 0.95rem;
+                line-height: 1.6;
+                margin-bottom: 15px;
+            }
+
+            .view-more-btn {
+                color: #fe5533;
+                font-weight: 600;
+                font-size: 14px;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+                transition: gap 0.3s ease;
+            }
+
+            .view-more-btn:hover {
+                gap: 10px;
+            }
+
+            /* Expanded Project View */
+            .project-expanded {
+                background: #ffffff;
+                border-radius: 12px;
+                padding: 40px;
+                box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+                margin-bottom: 40px;
+                animation: fadeIn 0.4s ease;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .project-expanded-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                margin-bottom: 30px;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .close-btn {
+                padding: 10px 25px;
+                background: #464242;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                font-size: 14px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .close-btn:hover {
+                background: #fe5533;
+            }
+
+            .project-gallery {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 15px;
+                margin-bottom: 30px;
+            }
+
+            .gallery-img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            }
+
+            .gallery-img:hover {
+                transform: scale(1.05);
+            }
+
+            .project-details-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 25px;
+                margin-top: 30px;
+            }
+
+            .detail-card {
+                background: #fdeeea;
+                padding: 20px;
+                border-radius: 8px;
+                border-left: 4px solid #fe5533;
+            }
+
+            .detail-card h5 {
+                color: #fe5533;
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+
+            .detail-card p {
+                color: #464242;
+                font-size: 16px;
+                font-weight: 600;
+                margin: 0;
+            }
+
+            .partners-list {
+                list-style: none;
+                padding: 0;
+                margin: 20px 0 0 0;
+            }
+
+            .partners-list li {
+                padding: 8px 0;
+                color: #464242;
+                position: relative;
+                padding-left: 20px;
+            }
+
+            .partners-list li:before {
+                content: """;
+                position: absolute;
+                left: 0;
+                color: #fe5533;
+                font-weight: bold;
+            }
+
+            /* Pagination */
+            .pagination-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                margin-top: 50px;
+            }
+
+            .pagination-btn {
+                padding: 10px 18px;
+                background: #ffffff;
+                color: #464242;
+                border: 2px solid #fdeeea;
+                border-radius: 8px;
+                font-size: 14px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .pagination-btn:hover:not(:disabled) {
+                background: #fe5533;
+                color: white;
+                border-color: #fe5533;
+            }
+
+            .pagination-btn.active {
+                background: #fe5533;
+                color: white;
+                border-color: #fe5533;
+            }
+
+            .pagination-btn:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+
+            .no-results {
+                text-align: center;
+                padding: 60px 20px;
+                color: #666666;
+            }
+
+            .no-results i {
+                font-size: 60px;
+                color: #fdeeea;
+                margin-bottom: 20px;
+            }
+
+            .no-results h3 {
+                color: #464242;
+                margin-bottom: 10px;
+            }
+
+            /* Responsive */
+            @media (max-width: 768px) {
+                .projects-hero h1 {
+                    font-size: 2rem;
+                }
+
+                .filter-controls {
+                    flex-direction: column;
+                    align-items: stretch;
+                }
+
+                .filter-group {
+                    flex-direction: column;
+                    align-items: stretch;
+                }
+
+                .filter-select {
+                    width: 100%;
+                }
+
+                .projects-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .project-expanded {
+                    padding: 20px;
+                }
+
+                .project-gallery {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            .hidden {
+                display: none;
+            }
+        </style>
+   </head>
+
+   <body>
+    <!-- Header Start -->
+    <header>
+        <div class="header-area header-transparent">
+            <div class="main-header ">
+               <div class="header-bottom  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-2 col-lg-2 col-md-1">
+                                <div class="logo">
+                                    <a href="index.html" class="big-logo">
+                                        <img src="travologo3.png" alt="Travo Group" style="height: 90px; width: auto; margin-top: 5px; margin-bottom: 5px; margin-right: 10px;">
+                                    </a>
+                                    <a href="index.html" class="small-logo">
+                                        <img src="travologo3.png" alt="Travo Group" style="height: 50px; width: auto; margin-right: 8px;">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-8">
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="#">Who We Are</a>
+                                                <ul class="submenu">
+                                                    <li><a href="who-we-are/heritage.html">Story & Heritage</a></li>
+                                                    <li><a href="who-we-are/leadership.html">Leadership</a></li>
+                                                    <li><a href="who-we-are/values.html">Values & Ethics</a></li>
+                                                    <li><a href="who-we-are/safety.html">Safety & Quality (HSE)</a></li>
+                                                    <li><a href="who-we-are/innovation.html">Innovation</a></li>
+                                                    <li><a href="who-we-are/diversity.html">Diversity & Inclusion</a></li>
+                                                    <li><a href="who-we-are/community.html">Community & Academia</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Our Work</a>
+                                                <ul class="submenu mega-menu">
+                                                    <li class="mega-column">
+                                                        <h4>Markets</h4>
+                                                        <ul>
+                                                            <li><a href="markets/transportation.html">Transportation</a></li>
+                                                            <li><a href="markets/water.html">Water & Wastewater</a></li>
+                                                            <li><a href="markets/marine.html">Marine & Coastal</a></li>
+                                                            <li><a href="markets/energy.html">Energy & Oilfield</a></li>
+                                                            <li><a href="markets/buildings.html">Buildings & Prefabrication</a></li>
+                                                            <li><a href="markets/environment.html">Environment</a></li>
+                                                            <li><a href="markets/airport.html">Airports & Helipads</a></li>
+                                                            <li><a href="markets/urban.html">Urban & Landscaping</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="mega-column">
+                                                        <h4>Services</h4>
+                                                        <ul>
+                                                            <li><a href="services/civil.html">Civil & Roads</a></li>
+                                                            <li><a href="services/geotechnical.html">Geotechnical & Foundations</a></li>
+                                                            <li><a href="services/mep.html">MEP & Electromechanical</a></li>
+                                                            <li><a href="services/electrical.html">Electrical & Power</a></li>
+                                                            <li><a href="services/marine.html">Marine Construction</a></li>
+                                                            <li><a href="services/landscape.html">Landscaping & Beautification</a></li>
+                                                            <li><a href="services/oilfield.html">Oilfield Services</a></li>
+                                                            <li><a href="services/special.html">Specialty Services</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="mega-column">
+                                                        <h4>Quick Links</h4>
+                                                        <ul>
+                                                            <li><a href="projects.html">All Projects</a></li>
+                                                            <li><a href="#">Case Studies</a></li>
+                                                            <li><a href="#">Service Areas Map</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Locations</a>
+                                                <ul class="submenu">
+                                                    <li><a href="Locations/lebanon.html">Lebanon</a></li>
+                                                    <li><a href="Locations/oman.html">Oman</a></li>
+                                                    <li><a href="Locations/uae.html">United Arab Emirates</a></li>
+                                                    <li><a href="Locations/qatar.html">Qatar</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Trade Partners</a>
+                                                <ul class="submenu">
+                                                    <li><a href="TradePartners/pre.html">Prequalification Process</a></li>
+                                                   <li><a href="TradePartners/bid.html">Current Bid Opportunities</a></li>
+                                                    <li><a href="TradePartners/standards.html">Standards & Forms</a></li>
+                                                    <li><a href="TradePartners/contract.html">Contract Procurement</a></li>
+                                                    <li><a href="TradePartners/payment.html">Payment & Compliance</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Insights</a>
+                                                <ul class="submenu">
+                                                    <li><a href="insights/news.html">Latest News</a></li>
+                                                    <li><a href="insights/articles.html">Technical Articles</a></li>
+                                                    <li><a href="insights/highlights.html">Event Highlights</a></li>
+                                                    <li><a href="insights/partnerships.html">Academic Partnerships</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="careers.html">Careers</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-3"></div>
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+       </div>
+    </header>
+    <!-- Header End -->
+
+    <main>
+        <!-- Hero Section -->
+        <section class="projects-hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto text-center">
+                        <h1>Our Projects</h1>
+                        <p>Delivering engineering excellence across 500+ projects in the Middle East</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-controls">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Search projects...">
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="regionFilter">Region:</label>
+                        <select id="regionFilter" class="filter-select">
+                            <option value="all">All Regions</option>
+                            <option value="Lebanon">Lebanon</option>
+                            <option value="Oman">Oman</option>
+                            <option value="UAE">UAE</option>
+                            <option value="Qatar">Qatar</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="marketFilter">Market:</label>
+                        <select id="marketFilter" class="filter-select">
+                            <option value="all">All Markets</option>
+                            <option value="Transportation">Transportation</option>
+                            <option value="Marine & Coastal">Marine & Coastal</option>
+                            <option value="Water & Wastewater">Water & Wastewater</option>
+                            <option value="Energy & Oilfield">Energy & Oilfield</option>
+                            <option value="Buildings">Buildings</option>
+                            <option value="Environment">Environment</option>
+                        </select>
+                    </div>
+
+                    <button class="reset-filters" id="resetFilters">Reset Filters</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid Section -->
+        <section class="projects-grid-section">
+            <div class="container">
+                <!-- Expanded Project View (Hidden by default) -->
+                <div id="expandedView" class="hidden"></div>
+
+                <!-- Projects Grid -->
+                <div id="projectsGrid" class="projects-grid"></div>
+
+                <!-- No Results Message -->
+                <div id="noResults" class="no-results hidden">
+                    <i class="fas fa-folder-open"></i>
+                    <h3>No Projects Found</h3>
+                    <p>Try adjusting your filters or search terms</p>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination-wrapper" id="paginationWrapper"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Start-->
+    <footer>
+        <div class="footer-main">
+            <div class="footer-area footer-compact">
+                <div class="container">
+                    <div class="row align-items-start">
+                        <div class="col-lg-3 col-md-6 mb-30">
+                            <div class="footer-logo mb-20">
+                                <a href="index.html"><img src="travologo3.png" alt="Travo Group" style="height: 70px; width: auto;"></a>
+                            </div>
+                            <p class="footer-desc">Leading construction and engineering excellence across the Middle East</p>
+                            <div class="map-footer mt-20">
+                                <img src="assets/img/gallery/map-footer.png" alt="Travo Group Locations" style="max-width: 150px; opacity: 0.8;">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 mb-30">
+                            <h4 class="footer-title">Quick Links</h4>
+                            <ul class="footer-links">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-30">
+                            <h4 class="footer-title">Contact</h4>
+                            <p class="footer-contact">198 West 21th Street, Suite 721<br>New York, NY 10010</p>
+                            <ul class="footer-links">
+                                <li><a href="#">Phone: +95 (0) 123 456 789</a></li>
+                                <li><a href="#">Cell: +95 (0) 123 456 789</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-30">
+                            <h4 class="footer-title">Legal & Certifications</h4>
+                            <ul class="footer-links footer-legal-links">
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms of Service</a></li>
+                                <li><a href="#">Code of Conduct</a></li>
+                            </ul>
+                            <div class="footer-certifications mt-15">
+                                <span style="color: #d9c487; font-size: 13px; font-weight: 500;">ISO 9002 Certified | HSE Compliant</span>
+                            </div>
+                            <div class="footer-copy mt-15">
+                                <p style="color: rgba(255, 255, 255, 0.7); font-size: 13px; margin: 0;">&copy; 2024 Travo Group. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End-->
+
+	<!-- JS here -->
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/gijgo.min.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
+    <script src="./assets/js/jquery.scrollUp.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+    <script>
+        // Projects Data
+        const projectsData = [
+            {
+                id: 1,
+                title: "Duqm Port Expansion",
+                location: "Oman",
+                market: "Marine & Coastal",
+                summary: "Major marine infrastructure expansion supporting regional trade development",
+                image: "assets/img/gallery/project1.png",
+                description: "The Duqm Port Expansion project represents a significant milestone in Oman's maritime infrastructure development. This comprehensive project involved the construction of new quay walls, deepwater berths, and cargo handling facilities to accommodate larger vessels and increase port capacity. Our team successfully delivered advanced marine construction techniques, including underwater piling, dredging operations, and the installation of modern port equipment.",
+                duration: "36 months",
+                scope: "5km of quay walls, 3 deepwater berths, cargo facilities",
+                safety: "Zero lost time incidents, 500,000+ safe work hours",
+                services: ["Marine Construction", "Dredging", "Civil Engineering", "MEP Installation"],
+                partners: ["Oman Port Authority", "Duqm Development Company", "International Maritime Consultants"],
+                gallery: ["assets/img/gallery/project1.png", "assets/img/gallery/project2.png", "assets/img/gallery/project3.png"]
+            },
+            {
+                id: 2,
+                title: "Highway Infrastructure Development",
+                location: "UAE",
+                market: "Transportation",
+                summary: "Critical transportation corridors connecting major economic zones",
+                image: "assets/img/gallery/project2.png",
+                description: "This ambitious highway infrastructure project established critical transportation links between major economic zones in the UAE. The project encompassed the design and construction of 85km of multi-lane highways, including 12 major interchanges, 8 bridges, and advanced drainage systems. Our engineering team implemented cutting-edge road construction techniques and utilized high-performance materials to ensure durability and longevity in the harsh desert climate.",
+                duration: "48 months",
+                scope: "85km highways, 12 interchanges, 8 bridges",
+                safety: "ISO 45001 certified, Perfect HSE record",
+                services: ["Civil Engineering", "Road Construction", "Bridge Engineering", "Traffic Systems"],
+                partners: ["UAE Ministry of Infrastructure", "Roads & Transport Authority", "European Engineering Consortium"],
+                gallery: ["assets/img/gallery/project2.png", "assets/img/gallery/project4.png", "assets/img/gallery/project5.png"]
+            },
+            {
+                id: 3,
+                title: "Wastewater Treatment Facility",
+                location: "Lebanon",
+                market: "Water & Wastewater",
+                summary: "Advanced water treatment systems serving urban communities",
+                image: "assets/img/gallery/project3.png",
+                description: "This state-of-the-art wastewater treatment facility provides essential environmental infrastructure for Lebanon's growing urban population. The project included the construction of primary, secondary, and tertiary treatment systems with a capacity of 150,000 cubic meters per day. Our team implemented advanced biological treatment processes, sludge handling facilities, and odor control systems to ensure compliance with international environmental standards.",
+                duration: "30 months",
+                scope: "150,000 m&sup3;/day capacity, Full treatment systems",
+                safety: "100% HSE compliance, Environmental certifications",
+                services: ["Civil Engineering", "MEP Systems", "Environmental Engineering", "Process Equipment"],
+                partners: ["Lebanese Ministry of Environment", "World Bank", "Water Treatment Technology Providers"],
+                gallery: ["assets/img/gallery/project3.png", "assets/img/gallery/project1.png", "assets/img/gallery/project6.png"]
+            },
+            {
+                id: 4,
+                title: "Oilfield Site Preparation",
+                location: "Oman",
+                market: "Energy & Oilfield",
+                summary: "Comprehensive site development for energy sector operations",
+                image: "assets/img/gallery/project4.png",
+                description: "A comprehensive oilfield site preparation project that established critical infrastructure for energy sector operations in Oman's interior. The project involved extensive earthworks, construction of access roads, installation of utilities, and development of support facilities across a 500-hectare site. Our specialized team successfully navigated challenging geological conditions and extreme temperatures to deliver the project ahead of schedule.",
+                duration: "24 months",
+                scope: "500 hectares, Complete site infrastructure",
+                safety: "Zero incidents, Petroleum safety certified",
+                services: ["Site Preparation", "Civil Works", "Utilities Installation", "Oilfield Services"],
+                partners: ["Petroleum Development Oman", "International Oil Companies", "Specialty Contractors"],
+                gallery: ["assets/img/gallery/project4.png", "assets/img/gallery/project2.png", "assets/img/gallery/project5.png"]
+            },
+            {
+                id: 5,
+                title: "Airport Runway Construction",
+                location: "UAE",
+                market: "Transportation",
+                summary: "State-of-the-art aviation infrastructure supporting regional connectivity",
+                image: "assets/img/gallery/project5.png",
+                description: "This flagship aviation infrastructure project delivered a world-class runway and associated facilities to support the UAE's growing air transportation needs. The project included construction of a 4,000-meter runway with full instrument landing systems, taxiways, aprons, and advanced ground lighting systems. Our engineering team employed precision grading techniques and specialized pavement materials to meet stringent international aviation standards.",
+                duration: "28 months",
+                scope: "4,000m runway, Taxiways, Complete lighting systems",
+                safety: "Aviation safety certified, Zero safety violations",
+                services: ["Heavy Civil Construction", "Pavement Engineering", "Electrical Systems", "Aviation Infrastructure"],
+                partners: ["Civil Aviation Authority", "International Airport Consultants", "Aviation Technology Providers"],
+                gallery: ["assets/img/gallery/project5.png", "assets/img/gallery/project1.png", "assets/img/gallery/project3.png"]
+            },
+            {
+                id: 6,
+                title: "Marine Breakwater Project",
+                location: "Qatar",
+                market: "Marine & Coastal",
+                summary: "Coastal protection infrastructure safeguarding maritime facilities",
+                image: "assets/img/gallery/project6.png",
+                description: "This critical coastal protection project involved the design and construction of a 2.5km marine breakwater to protect port facilities and coastal developments from harsh wave action. The project utilized advanced marine construction techniques including placement of armor rock, construction of caisson structures, and installation of wave energy dissipation systems. Our marine engineering team successfully completed the project despite challenging weather windows and strong tidal currents.",
+                duration: "32 months",
+                scope: "2.5km breakwater, Armor rock protection, Wave barriers",
+                safety: "Marine safety excellence, Environmental protection",
+                services: ["Marine Construction", "Coastal Engineering", "Rock Armor Installation", "Hydrographic Surveys"],
+                partners: ["Qatar Port Authority", "Marine Consultants International", "Coastal Engineering Specialists"],
+                gallery: ["assets/img/gallery/project6.png", "assets/img/gallery/project4.png", "assets/img/gallery/project2.png"]
+            },
+            // Additional projects to showcase portfolio breadth
+            {
+                id: 7,
+                title: "Urban Metro Line Extension",
+                location: "UAE",
+                market: "Transportation",
+                summary: "Expanding rapid transit infrastructure for sustainable urban mobility",
+                image: "assets/img/gallery/project3.png",
+                description: "A transformative metro line extension project that added 15km of elevated and underground rail infrastructure to the existing urban transit network. The project included construction of 8 new stations, rail systems installation, and integration with existing transportation networks. Our multidisciplinary team coordinated complex utility relocations and minimized disruption to city operations during construction.",
+                duration: "40 months",
+                scope: "15km rail line, 8 stations, Complete systems integration",
+                safety: "Rail safety certified, Public safety excellence",
+                services: ["Heavy Civil Construction", "Rail Systems", "Station Architecture", "MEP Integration"],
+                partners: ["Transport Authority", "Metro Operations Company", "Rail Technology Suppliers"],
+                gallery: ["assets/img/gallery/project3.png", "assets/img/gallery/project5.png", "assets/img/gallery/project1.png"]
+            },
+            {
+                id: 8,
+                title: "Coastal Desalination Plant",
+                location: "Oman",
+                market: "Water & Wastewater",
+                summary: "Advanced desalination technology ensuring water security",
+                image: "assets/img/gallery/project1.png",
+                description: "A cutting-edge desalination facility utilizing reverse osmosis technology to produce 100,000 cubic meters per day of potable water. The project included construction of intake structures, pre-treatment facilities, RO systems, and water distribution infrastructure. Our team successfully integrated advanced automation systems and energy recovery devices to optimize operational efficiency.",
+                duration: "36 months",
+                scope: "100,000 m&sup3;/day capacity, RO technology, Distribution network",
+                safety: "Process safety certified, Environmental compliance",
+                services: ["Civil Engineering", "Process Systems", "Marine Intake", "Electrical & Automation"],
+                partners: ["Water Resources Ministry", "Desalination Technology Providers", "International Water Consultants"],
+                gallery: ["assets/img/gallery/project1.png", "assets/img/gallery/project6.png", "assets/img/gallery/project4.png"]
+            },
+            {
+                id: 9,
+                title: "Industrial Park Infrastructure",
+                location: "Lebanon",
+                market: "Buildings",
+                summary: "Complete infrastructure development for modern industrial zone",
+                image: "assets/img/gallery/project2.png",
+                description: "A comprehensive industrial park development project that created modern infrastructure for manufacturing and logistics operations. The project encompassed roads, utilities, drainage systems, wastewater treatment, and power distribution across a 200-hectare industrial zone. Our integrated approach ensured efficient coordination of multiple infrastructure systems and timely delivery of operational facilities.",
+                duration: "30 months",
+                scope: "200 hectares, Complete utilities, Access infrastructure",
+                safety: "Industrial safety certified, Environmental excellence",
+                services: ["Site Development", "Civil Infrastructure", "Utilities Engineering", "Environmental Systems"],
+                partners: ["Industrial Development Authority", "Private Sector Partners", "Utility Providers"],
+                gallery: ["assets/img/gallery/project2.png", "assets/img/gallery/project3.png", "assets/img/gallery/project5.png"]
+            },
+            {
+                id: 10,
+                title: "Solar Farm Site Works",
+                location: "UAE",
+                market: "Energy & Oilfield",
+                summary: "Renewable energy infrastructure supporting sustainability goals",
+                image: "assets/img/gallery/project4.png",
+                description: "A large-scale solar farm project that prepared 300 hectares of desert land for installation of photovoltaic panels and supporting infrastructure. The project included extensive grading, construction of access roads, installation of underground cable systems, and development of maintenance facilities. Our team successfully completed the challenging earthworks in extreme temperatures while maintaining strict environmental controls.",
+                duration: "18 months",
+                scope: "300 hectares, Complete site preparation, Infrastructure",
+                safety: "Renewable energy safety standards, Zero environmental incidents",
+                services: ["Site Preparation", "Civil Works", "Electrical Infrastructure", "Environmental Management"],
+                partners: ["Renewable Energy Authority", "Solar Technology Companies", "Engineering Consultants"],
+                gallery: ["assets/img/gallery/project4.png", "assets/img/gallery/project1.png", "assets/img/gallery/project6.png"]
+            },
+            {
+                id: 11,
+                title: "Bridge Rehabilitation Program",
+                location: "Lebanon",
+                market: "Transportation",
+                summary: "Structural rehabilitation of critical transportation bridges",
+                image: "assets/img/gallery/project5.png",
+                description: "A comprehensive bridge rehabilitation program that restored structural integrity and extended service life of 15 highway bridges. The project involved detailed structural assessments, repair of deteriorated concrete, replacement of expansion joints, and installation of modern protective systems. Our specialized engineering team minimized traffic disruptions through phased construction and innovative repair techniques.",
+                duration: "24 months",
+                scope: "15 bridges, Structural repairs, Modern protective systems",
+                safety: "Bridge safety certified, Traffic management excellence",
+                services: ["Structural Engineering", "Concrete Repair", "Bridge Systems", "Traffic Management"],
+                partners: ["Ministry of Public Works", "Bridge Consultants", "Specialty Materials Suppliers"],
+                gallery: ["assets/img/gallery/project5.png", "assets/img/gallery/project2.png", "assets/img/gallery/project4.png"]
+            },
+            {
+                id: 12,
+                title: "Urban Landscape Development",
+                location: "Qatar",
+                market: "Environment",
+                summary: "Transforming urban spaces with sustainable landscaping solutions",
+                image: "assets/img/gallery/project6.png",
+                description: "An innovative urban landscape project that created beautiful and sustainable green spaces across multiple city districts. The project included installation of efficient irrigation systems, selection of climate-appropriate vegetation, construction of pedestrian pathways, and integration of public art installations. Our landscape architecture team balanced aesthetic goals with water conservation requirements in the arid climate.",
+                duration: "20 months",
+                scope: "50 hectares, Parks and walkways, Irrigation systems",
+                safety: "Public safety certified, Sustainable practices",
+                services: ["Landscape Architecture", "Irrigation Systems", "Civil Works", "Horticulture"],
+                partners: ["Municipality", "Landscape Architects", "Irrigation Technology Providers"],
+                gallery: ["assets/img/gallery/project6.png", "assets/img/gallery/project3.png", "assets/img/gallery/project1.png"]
+            }
+        ];
+
+        // State Management
+        let currentPage = 1;
+        const projectsPerPage = 6;
+        let filteredProjects = [...projectsData];
+        let expandedProjectId = null;
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            renderProjects();
+            setupEventListeners();
+        });
+
+        // Setup Event Listeners
+        function setupEventListeners() {
+            document.getElementById('searchInput').addEventListener('input', debounce(applyFilters, 300));
+            document.getElementById('regionFilter').addEventListener('change', applyFilters);
+            document.getElementById('marketFilter').addEventListener('change', applyFilters);
+            document.getElementById('resetFilters').addEventListener('click', resetFilters);
+        }
+
+        // Debounce function for search input
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Apply Filters
+        function applyFilters() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const regionFilter = document.getElementById('regionFilter').value;
+            const marketFilter = document.getElementById('marketFilter').value;
+
+            filteredProjects = projectsData.filter(project => {
+                const matchesSearch = project.title.toLowerCase().includes(searchTerm) ||
+                                    project.summary.toLowerCase().includes(searchTerm) ||
+                                    project.description.toLowerCase().includes(searchTerm);
+                const matchesRegion = regionFilter === 'all' || project.location === regionFilter;
+                const matchesMarket = marketFilter === 'all' || project.market === marketFilter;
+
+                return matchesSearch && matchesRegion && matchesMarket;
+            });
+
+            currentPage = 1;
+            expandedProjectId = null;
+            renderProjects();
+        }
+
+        // Reset Filters
+        function resetFilters() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('regionFilter').value = 'all';
+            document.getElementById('marketFilter').value = 'all';
+            filteredProjects = [...projectsData];
+            currentPage = 1;
+            expandedProjectId = null;
+            renderProjects();
+        }
+
+        // Render Projects
+        function renderProjects() {
+            const gridContainer = document.getElementById('projectsGrid');
+            const expandedView = document.getElementById('expandedView');
+            const noResults = document.getElementById('noResults');
+
+            // Check if we have an expanded project
+            if (expandedProjectId) {
+                renderExpandedProject(expandedProjectId);
+                gridContainer.classList.add('hidden');
+                document.getElementById('paginationWrapper').classList.add('hidden');
+                noResults.classList.add('hidden');
+                return;
+            }
+
+            // Show/hide grid based on results
+            if (filteredProjects.length === 0) {
+                gridContainer.classList.add('hidden');
+                noResults.classList.remove('hidden');
+                document.getElementById('paginationWrapper').classList.add('hidden');
+                return;
+            }
+
+            gridContainer.classList.remove('hidden');
+            noResults.classList.add('hidden');
+            expandedView.classList.add('hidden');
+
+            // Calculate pagination
+            const startIndex = (currentPage - 1) * projectsPerPage;
+            const endIndex = startIndex + projectsPerPage;
+            const projectsToShow = filteredProjects.slice(startIndex, endIndex);
+
+            // Render project cards
+            gridContainer.innerHTML = projectsToShow.map(project => `
+                <div class="project-card" onclick="viewProject(${project.id})">
+                    <img src="${project.image}" alt="${project.title}" class="project-card-img">
+                    <div class="project-card-body">
+                        <div class="project-card-meta">
+                            <span class="project-tag">${project.market}</span>
+                            <span class="project-location">${project.location}</span>
+                        </div>
+                        <h3 class="project-card-title">${project.title}</h3>
+                        <p class="project-card-desc">${project.summary}</p>
+                        <a href="javascript:void(0)" class="view-more-btn">
+                            View More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+
+            renderPagination();
+        }
+
+        // Render Expanded Project
+        function renderExpandedProject(projectId) {
+            const project = projectsData.find(p => p.id === projectId);
+            if (!project) return;
+
+            const expandedView = document.getElementById('expandedView');
+            expandedView.classList.remove('hidden');
+
+            expandedView.innerHTML = `
+                <div class="project-expanded">
+                    <div class="project-expanded-header">
+                        <div>
+                            <div class="project-card-meta" style="margin-bottom: 15px;">
+                                <span class="project-tag">${project.market}</span>
+                                <span class="project-location">${project.location}</span>
+                            </div>
+                            <h2 style="color: #464242; font-size: 2.2rem; margin-bottom: 15px;">${project.title}</h2>
+                            <p style="color: #666666; font-size: 1.1rem; font-style: italic;">${project.summary}</p>
+                        </div>
+                        <button class="close-btn" onclick="closeExpandedView()">
+                            <i class="fas fa-times"></i> Close
+                        </button>
+                    </div>
+
+                    <div class="project-gallery">
+                        ${project.gallery.map(img => `
+                            <img src="${img}" alt="${project.title}" class="gallery-img">
+                        `).join('')}
+                    </div>
+
+                    <div style="margin-top: 30px;">
+                        <h4 style="color: #fe5533; font-size: 1.3rem; margin-bottom: 15px; text-transform: uppercase; font-weight: 700;">Project Overview</h4>
+                        <p style="color: #464242; font-size: 1rem; line-height: 1.8;">${project.description}</p>
+                    </div>
+
+                    <div class="project-details-grid">
+                        <div class="detail-card">
+                            <h5><i class="fas fa-clock"></i> Duration</h5>
+                            <p>${project.duration}</p>
+                        </div>
+                        <div class="detail-card">
+                            <h5><i class="fas fa-tasks"></i> Scope</h5>
+                            <p>${project.scope}</p>
+                        </div>
+                        <div class="detail-card">
+                            <h5><i class="fas fa-shield-alt"></i> Safety</h5>
+                            <p>${project.safety}</p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 40px;">
+                        <h4 style="color: #fe5533; font-size: 1.3rem; margin-bottom: 15px; text-transform: uppercase; font-weight: 700;">Services Provided</h4>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            ${project.services.map(service => `
+                                <span style="padding: 8px 16px; background: #fdeeea; color: #464242; border-radius: 20px; font-size: 14px; font-weight: 600;">${service}</span>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 40px;">
+                        <h4 style="color: #fe5533; font-size: 1.3rem; margin-bottom: 15px; text-transform: uppercase; font-weight: 700;">Partners & Stakeholders</h4>
+                        <ul class="partners-list">
+                            ${project.partners.map(partner => `<li>${partner}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Render Pagination
+        function renderPagination() {
+            const paginationWrapper = document.getElementById('paginationWrapper');
+            const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
+
+            if (totalPages <= 1) {
+                paginationWrapper.innerHTML = '';
+                paginationWrapper.classList.add('hidden');
+                return;
+            }
+
+            paginationWrapper.classList.remove('hidden');
+
+            let paginationHTML = `
+                <button class="pagination-btn" onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>
+                    <i class="fas fa-chevron-left"></i> Previous
+                </button>
+            `;
+
+            // Page numbers
+            for (let i = 1; i <= totalPages; i++) {
+                if (i === 1 || i === totalPages || (i >= currentPage - 1 && i <= currentPage + 1)) {
+                    paginationHTML += `
+                        <button class="pagination-btn ${i === currentPage ? 'active' : ''}" onclick="changePage(${i})">
+                            ${i}
+                        </button>
+                    `;
+                } else if (i === currentPage - 2 || i === currentPage + 2) {
+                    paginationHTML += `<span style="padding: 10px; color: #464242;">...</span>`;
+                }
+            }
+
+            paginationHTML += `
+                <button class="pagination-btn" onclick="changePage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+            `;
+
+            paginationWrapper.innerHTML = paginationHTML;
+        }
+
+        // Change Page
+        function changePage(page) {
+            const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
+            if (page < 1 || page > totalPages) return;
+
+            currentPage = page;
+            renderProjects();
+            window.scrollTo({ top: 400, behavior: 'smooth' });
+        }
+
+        // View Project
+        function viewProject(projectId) {
+            expandedProjectId = projectId;
+            renderProjects();
+        }
+
+        // Close Expanded View
+        function closeExpandedView() {
+            expandedProjectId = null;
+            renderProjects();
+            window.scrollTo({ top: 400, behavior: 'smooth' });
+        }
+    </script>
+   </body>
+</html>
