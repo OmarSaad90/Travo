@@ -24,7 +24,7 @@
         <style>
             /* Projects Page Custom Styles */
             .projects-hero {
-                background: linear-gradient(135deg, #464242 0%, #fe5533 100%);
+                background: #464242;
                 padding: 120px 0 80px;
                 position: relative;
                 overflow: hidden;
@@ -83,6 +83,8 @@
                 min-width: 180px;
                 cursor: pointer;
                 transition: all 0.3s ease;
+                line-height: 1.5;
+                vertical-align: middle;
             }
 
             .filter-select:focus {
@@ -347,7 +349,7 @@
             }
 
             .partners-list li:before {
-                content: """;
+                content: "•";
                 position: absolute;
                 left: 0;
                 color: #fe5533;
@@ -910,8 +912,16 @@
         // Setup Event Listeners
         function setupEventListeners() {
             document.getElementById('searchInput').addEventListener('input', debounce(applyFilters, 300));
-            document.getElementById('regionFilter').addEventListener('change', applyFilters);
-            document.getElementById('marketFilter').addEventListener('change', applyFilters);
+
+            const regionFilter = document.getElementById('regionFilter');
+            const marketFilter = document.getElementById('marketFilter');
+
+            regionFilter.addEventListener('change', applyFilters);
+            marketFilter.addEventListener('change', applyFilters);
+
+            $(regionFilter).on('change', applyFilters);
+            $(marketFilter).on('change', applyFilters);
+
             document.getElementById('resetFilters').addEventListener('click', resetFilters);
         }
 
@@ -952,8 +962,16 @@
         // Reset Filters
         function resetFilters() {
             document.getElementById('searchInput').value = '';
-            document.getElementById('regionFilter').value = 'all';
-            document.getElementById('marketFilter').value = 'all';
+
+            const regionFilter = document.getElementById('regionFilter');
+            const marketFilter = document.getElementById('marketFilter');
+
+            regionFilter.value = 'all';
+            marketFilter.value = 'all';
+
+            $(regionFilter).val('all').trigger('change');
+            $(marketFilter).val('all').trigger('change');
+
             filteredProjects = [...projectsData];
             currentPage = 1;
             expandedProjectId = null;
@@ -1081,8 +1099,11 @@
                 </div>
             `;
 
-            // Scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setTimeout(() => {
+                const expandedElement = document.getElementById('expandedView');
+                const offsetTop = expandedElement.offsetTop - 100;
+                window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+            }, 100);
         }
 
         // Render Pagination
@@ -1146,7 +1167,11 @@
         function closeExpandedView() {
             expandedProjectId = null;
             renderProjects();
-            window.scrollTo({ top: 400, behavior: 'smooth' });
+            setTimeout(() => {
+                const gridElement = document.getElementById('projectsGrid');
+                const offsetTop = gridElement.offsetTop - 120;
+                window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+            }, 100);
         }
     </script>
    </body>

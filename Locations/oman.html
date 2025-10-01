@@ -190,7 +190,7 @@
             </div>
         </section>
 
-        <section class="companies-section section-padding30" style="background-color: #fdeeea;">
+        <section id="companies" class="companies-section section-padding30" style="background-color: #fdeeea;">
             <div class="container">
                 <div class="row justify-content-center mb-50">
                     <div class="col-lg-10 text-center">
@@ -416,7 +416,7 @@
             </div>
         </section>
 
-        <section class="projects-section section-padding30" style="background-color: #fdeeea;">
+        <section id="projects" class="projects-section section-padding30" style="background-color: #fdeeea;">
             <div class="container">
                 <div class="row justify-content-center mb-50">
                     <div class="col-lg-10 text-center">
@@ -532,7 +532,7 @@
             </div>
         </section>
 
-        <section class="offices-section section-padding30" style="background-color: white;">
+        <section id="offices" class="offices-section section-padding30" style="background-color: white;">
             <div class="container">
                 <div class="row justify-content-center mb-50">
                     <div class="col-lg-10 text-center">
@@ -855,6 +855,92 @@
         transform: translateY(-8px);
         box-shadow: 0 15px 40px rgba(0,0,0,0.15) !important;
     }
+    /* Mobile styles for cards - under 768px */
+@media (max-width: 768px) {
+    /* Company cards */
+    .company-card {
+        margin-bottom: 25px !important;
+    }
+    
+    /* Market cards */
+    .market-card {
+        margin-bottom: 20px !important;
+    }
+    
+    /* Project cards */
+    .project-card {
+        margin-bottom: 25px !important;
+    }
+    
+    /* Office cards */
+    .office-card {
+        margin-bottom: 25px !important;
+    }
+    
+    /* News cards */
+    .news-card {
+        margin-bottom: 25px !important;
+    }
+    
+    /* Specific spacing adjustments for card containers */
+    .companies-section .mb-40,
+    .projects-section .mb-40,
+    .news-section .mb-40 {
+        margin-bottom: 25px !important;
+    }
+    
+    .markets-section .mb-30,
+    .offices-section .mb-40 {
+        margin-bottom: 20px !important;
+    }
+    
+    /* Ensure consistent padding on mobile */
+    .company-card,
+    .project-card,
+    .news-card,
+    .office-card {
+        padding: 25px 20px !important;
+    }
+    
+    /* Adjust section padding for mobile */
+    .section-padding30 {
+        padding: 50px 0 !important;
+    }
+    
+    /* Adjust heading sizes for mobile */
+    h2 {
+        font-size: 2rem !important;
+    }
+    
+    h1 {
+        font-size: 2.5rem !important;
+    }
+}
+
+/* Additional mobile optimization for very small screens */
+@media (max-width: 480px) {
+    .company-card,
+    .project-card,
+    .news-card,
+    .office-card,
+    .market-card {
+        margin-bottom: 20px !important;
+    }
+    
+    .companies-section .mb-40,
+    .projects-section .mb-40,
+    .news-section .mb-40 {
+        margin-bottom: 20px !important;
+    }
+    
+    /* Reduce padding further for very small screens */
+    .company-card,
+    .project-card,
+    .news-card,
+    .office-card {
+        padding: 20px 15px !important;
+    }
+}
 
     .market-card:hover {
         border-color: #fe5533 !important;

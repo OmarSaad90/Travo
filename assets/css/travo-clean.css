@@ -835,7 +835,16 @@ html body header .slicknav_nav a:hover {
 
 html body .slicknav_btn,
 html body header .slicknav_btn {
+    background: transparent !important;
+    border: none !important;
+    padding: 10px 12px !important;
+}
+
+html body .slicknav_icon-bar,
+html body header .slicknav_icon-bar {
     background: var(--primary-color) !important;
+    height: 3px !important;
+    box-shadow: 0 2px 4px rgba(254, 85, 51, 0.3) !important;
 }
 
 @media (max-width: 991px) {
@@ -2035,6 +2044,8 @@ html body header .slicknav_btn {
         margin-left: 0 !important;
         margin-top: 30px !important;
         text-align: center;
+        -webkit-text-stroke: 1px var(--white) !important;
+        -webkit-text-fill-color: var(--white) !important;
     }
 
     .hero-buttons {
@@ -2154,13 +2165,16 @@ html body header .slicknav_btn {
 
     .slicknav_btn {
         margin: 0 !important;
-        padding: 8px 10px !important;
+        padding: 10px 12px !important;
         min-height: auto !important;
+        border: none !important;
     }
 
     .slicknav_icon-bar {
-        width: 22px !important;
-        height: 2px !important;
+        width: 26px !important;
+        height: 3px !important;
+        background: var(--primary-color) !important;
+        box-shadow: 0 2px 4px rgba(254, 85, 51, 0.3) !important;
     }
 
     /* Fix slider/hero container */
@@ -2199,6 +2213,8 @@ html body header .slicknav_btn {
         margin-left: 0 !important;
         text-align: center !important;
         font-size: 1.8rem !important;
+        -webkit-text-stroke: 0 !important;
+        -webkit-text-fill-color: var(--white) !important;
     }
 
     .hero-buttons {
@@ -2215,6 +2231,8 @@ html body header .slicknav_btn {
         width: 100% !important;
         text-align: center !important;
         display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
     .hero-stats {
@@ -2233,6 +2251,210 @@ html body header .slicknav_btn {
     }
 
     .mb-90 {
+        margin-bottom: 40px !important;
+    }
+
+    /* Trade Partners CTA Button */
+    .cta-content .btn {
+        font-size: 14px !important;
+        padding: 14px 25px !important;
+        letter-spacing: 0.5px !important;
+        white-space: normal !important;
+        line-height: 1.3 !important;
+    }
+
+    /* Careers Buttons Spacing */
+    .careers-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+
+    .careers-buttons .btn {
+        margin-right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Trade Partners Columns Spacing */
+    .trade-partner-column {
+        margin-bottom: 25px !important;
+    }
+
+    /* Heritage Page - Stats Alignment */
+    .stats-row {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+        gap: 15px !important;
+    }
+
+    .stat-item {
+        flex: 1 !important;
+        min-width: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .stat-text {
+        min-height: 40px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    /* Heritage Page - Timeline Cards */
+    .timeline-item {
+        margin-bottom: 40px !important;
+    }
+
+    .timeline-content {
+        width: 100% !important;
+        padding: 0 !important;
+        margin-bottom: 20px !important;
+    }
+
+    .timeline-card {
+        margin-bottom: 15px !important;
+    }
+
+    .timeline-image {
+        margin-bottom: 20px !important;
+    }
+
+    .timeline-marker {
+        left: 20px !important;
+    }
+
+    /* Leadership Page - Founder's Message Spacing */
+    .founder-image {
+        margin-bottom: 30px !important;
+    }
+
+    .founder-message {
+        margin-bottom: 30px !important;
+    }
+
+    /* Leadership Page - Principles Cards Spacing */
+    .leadership-value-card {
+        margin-bottom: 25px !important;
+    }
+
+    /* Values Page - Cards Spacing */
+    .value-card {
+        margin-bottom: 40px !important;
+    }
+
+    .core-values-section .col-lg-4,
+    .core-values-section .col-md-6 {
+        margin-bottom: 40px !important;
+    }
+
+    /* Values Page - Ethical Framework Cards Spacing */
+    .ethical-principle {
+        margin-bottom: 40px !important;
+    }
+
+    .ethical-framework .col-lg-6 {
+        margin-bottom: 40px !important;
+    }
+
+    /* Safety Page - HSE Management System Spacing */
+    .hse-system-section .col-lg-6 {
+        margin-bottom: 40px !important;
+    }
+
+    .hse-content,
+    .hse-visual {
+        margin-bottom: 30px !important;
+    }
+
+    /* Safety Page - Safety Culture Cards Spacing */
+    .safety-pillar {
+        margin-bottom: 40px !important;
+    }
+
+    .safety-culture-section .col-lg-3,
+    .safety-culture-section .col-md-6 {
+        margin-bottom: 40px !important;
+    }
+
+    /* Transportation Page - Challenge Section Cards */
+    .challenge-section .col-lg-4 {
+        margin-bottom: 40px !important;
+    }
+
+    /* Transportation Page - Capabilities Section Cards */
+    .capabilities-section .col-lg-6 {
+        margin-bottom: 40px !important;
+    }
+
+    /* Transportation Page - Proof Points Section Cards */
+    .proof-points-section .col-lg-3,
+    .proof-points-section .col-md-6 {
+        margin-bottom: 40px !important;
+    }
+
+    /* Transportation Page - Related Projects Section Cards */
+    .related-projects-section .col-lg-4,
+    .related-projects-section .col-md-6 {
+        margin-bottom: 40px !important;
+    }
+
+    /* Transportation Page - Team Section Cards */
+    .team-section .col-lg-4,
+    .team-section .col-md-6 {
+        margin-bottom: 40px !important;
+    }
+
+    /* Transportation Page - Hero Section Spacing */
+    section[style*="background-color: #464242"] .col-lg-6:last-child {
+        margin-top: 30px;
+    }
+
+    /* Lebanon Page - Company Cards */
+    .company-card {
+        margin-bottom: 40px !important;
+    }
+
+    /* Lebanon Page - Market Cards */
+    .market-card {
+        margin-bottom: 40px !important;
+    }
+
+    .markets-section .col-lg-3,
+    .markets-section .col-md-6 {
+        margin-bottom: 40px !important;
+    }
+
+    /* Lebanon Page - Project Cards */
+    .project-card {
+        margin-bottom: 40px !important;
+    }
+
+    /* Lebanon Page - Office Cards */
+    .office-card {
+        margin-bottom: 40px !important;
+    }
+
+    .offices-section .col-lg-6 {
+        margin-bottom: 40px !important;
+    }
+
+    /* Lebanon Page - Certifications Cards */
+    .certifications-section .col-lg-6 {
+        margin-bottom: 40px !important;
+    }
+
+    /* Lebanon Page - News Cards */
+    .news-card {
+        margin-bottom: 40px !important;
+    }
+
+    .news-section .col-lg-4,
+    .news-section .col-md-6 {
         margin-bottom: 40px !important;
     }
 }
@@ -2275,6 +2497,8 @@ html body header .slicknav_btn {
         margin-top: 20px !important;
         text-align: center;
         line-height: 1.2;
+        -webkit-text-stroke: 0 !important;
+        -webkit-text-fill-color: var(--white) !important;
     }
 
     .hero-buttons {
@@ -2291,6 +2515,8 @@ html body header .slicknav_btn {
         font-size: 14px !important;
         padding: 12px 24px !important;
         text-align: center;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
     .hero-stats {
@@ -2326,6 +2552,236 @@ html body header .slicknav_btn {
 
     .mb-90 {
         margin-bottom: 40px;
+    }
+
+    /* Trade Partners CTA Button */
+    .cta-content .btn {
+        font-size: 12px !important;
+        padding: 12px 20px !important;
+        letter-spacing: 0 !important;
+        white-space: normal !important;
+        line-height: 1.4 !important;
+    }
+
+    /* Careers Buttons Spacing */
+    .careers-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+
+    .careers-buttons .btn {
+        margin-right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        font-size: 13px !important;
+    }
+
+    /* Trade Partners Columns Spacing */
+    .trade-partner-column {
+        margin-bottom: 20px !important;
+    }
+
+    /* Heritage Page - Stats Alignment */
+    .stats-row {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+    }
+
+    .stat-item {
+        flex: 1 !important;
+        min-width: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .stat-number {
+        font-size: 1.8rem !important;
+    }
+
+    .stat-text {
+        font-size: 0.75rem !important;
+        min-height: 35px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        line-height: 1.2 !important;
+    }
+
+    /* Heritage Page - Timeline Cards */
+    .timeline-item {
+        margin-bottom: 30px !important;
+    }
+
+    .timeline-content {
+        width: 100% !important;
+        padding: 0 !important;
+        margin-bottom: 15px !important;
+    }
+
+    .timeline-card {
+        margin-bottom: 12px !important;
+        padding: 25px !important;
+    }
+
+    .timeline-image {
+        margin-bottom: 15px !important;
+        padding: 15px !important;
+    }
+
+    .timeline-marker {
+        left: 15px !important;
+    }
+
+    /* Leadership Page - Founder's Message Spacing */
+    .founder-image {
+        margin-bottom: 25px !important;
+    }
+
+    .founder-message {
+        margin-bottom: 25px !important;
+    }
+
+    /* Leadership Page - Principles Cards Spacing */
+    .leadership-value-card {
+        margin-bottom: 20px !important;
+    }
+
+    /* Values Page - Cards Spacing */
+    .value-card {
+        margin-bottom: 30px !important;
+    }
+
+    .core-values-section .col-lg-4,
+    .core-values-section .col-md-6 {
+        margin-bottom: 35px !important;
+    }
+
+    /* Values Page - Ethical Framework Cards Spacing */
+    .ethical-principle {
+        margin-bottom: 35px !important;
+    }
+
+    .ethical-framework .col-lg-6 {
+        margin-bottom: 35px !important;
+    }
+
+    /* Safety Page - HSE Management System Spacing */
+    .hse-system-section .col-lg-6 {
+        margin-bottom: 35px !important;
+    }
+
+    .hse-content,
+    .hse-visual {
+        margin-bottom: 25px !important;
+    }
+
+    /* Safety Page - Safety Culture Cards Spacing */
+    .safety-pillar {
+        margin-bottom: 35px !important;
+    }
+
+    .safety-culture-section .col-lg-3,
+    .safety-culture-section .col-md-6 {
+        margin-bottom: 35px !important;
+    }
+
+    /* Transportation Page - Challenge Section Cards */
+    .challenge-section .col-lg-4 {
+        margin-bottom: 35px !important;
+    }
+
+    /* Transportation Page - Capabilities Section Cards */
+    .capabilities-section .col-lg-6 {
+        margin-bottom: 35px !important;
+    }
+
+    /* Transportation Page - Proof Points Section Cards */
+    .proof-points-section .col-lg-3,
+    .proof-points-section .col-md-6 {
+        margin-bottom: 35px !important;
+    }
+    .location-card {
+        margin-bottom: 25px !important;
+    }
+    
+    /* Specifically target the location card columns */
+    .locations-area .col-lg-3.col-md-6.mb-30 {
+        margin-bottom: 25px !important;
+    }
+    
+    /* Ensure consistent card height and spacing */
+    .location-card {
+        padding: 25px 20px !important;
+    }
+    .trade-partners-area .col-lg-6 {
+        margin-bottom: 30px !important;
+    }
+
+    /* Transportation Page - Related Projects Section Cards */
+    .related-projects-section .col-lg-4,
+    .related-projects-section .col-md-6 {
+        margin-bottom: 35px !important;
+    }
+
+    /* Transportation Page - Team Section Cards */
+    .team-section .col-lg-4,
+    .team-section .col-md-6 {
+        margin-bottom: 35px !important;
+    }
+
+    /* Transportation Page - Hero Section Spacing */
+    section[style*="background-color: #464242"] .col-lg-6:last-child {
+        margin-top: 25px;
+    }
+
+    /* Lebanon Page - Company Cards */
+    .company-card {
+        margin-bottom: 35px !important;
+    }
+
+    /* Lebanon Page - Market Cards */
+    .market-card {
+        margin-bottom: 35px !important;
+    }
+
+    .markets-section .col-lg-3,
+    .markets-section .col-md-6 {
+        margin-bottom: 35px !important;
+    }
+
+    /* Lebanon Page - Project Cards */
+    .project-card {
+        margin-bottom: 35px !important;
+    }
+
+    /* Lebanon Page - Office Cards */
+    .office-card {
+        margin-bottom: 35px !important;
+    }
+
+    .offices-section .col-lg-6 {
+        margin-bottom: 35px !important;
+    }
+    
+
+    /* Lebanon Page - Certifications Cards */
+    .certifications-section .col-lg-6 {
+        margin-bottom: 35px !important;
+    }
+
+    /* Lebanon Page - News Cards */
+    .news-card {
+        margin-bottom: 35px !important;
+    }
+
+    .news-section .col-lg-4,
+    .news-section .col-md-6 {
+        margin-bottom: 35px !important;
     }
 }
 
