@@ -167,23 +167,37 @@
       nice_Select.niceSelect();
     }
 
-/* 7.  Custom Sticky Menu  */
-    $(window).on('scroll', function () {
-      var scroll = $(window).scrollTop();
-      if (scroll < 245) {
-        $(".header-sticky").removeClass("sticky-bar");
-      } else {
-        $(".header-sticky").addClass("sticky-bar");
-      }
-    });
+/* 7.  Custom Sticky Menu with Hide/Show on Scroll  */
+    var prevScrollpos = window.pageYOffset;
+    var stickyThreshold = 245;
 
     $(window).on('scroll', function () {
+      var currentScrollPos = window.pageYOffset;
       var scroll = $(window).scrollTop();
-      if (scroll < 245) {
-          $(".header-sticky").removeClass("sticky");
+
+      // Add/Remove sticky classes
+      if (scroll < stickyThreshold) {
+        $(".header-sticky").removeClass("sticky-bar");
+        $(".header-sticky").removeClass("sticky");
+        $(".header-sticky").removeClass("nav-up");
+        $(".header-sticky").removeClass("nav-down");
       } else {
-          $(".header-sticky").addClass("sticky");
+        $(".header-sticky").addClass("sticky-bar");
+        $(".header-sticky").addClass("sticky");
+
+        // Hide/show logic - only when sticky
+        if (prevScrollpos > currentScrollPos) {
+          // Scrolling up - show navbar
+          $(".header-sticky").removeClass("nav-up");
+          $(".header-sticky").addClass("nav-down");
+        } else {
+          // Scrolling down - hide navbar
+          $(".header-sticky").removeClass("nav-down");
+          $(".header-sticky").addClass("nav-up");
+        }
       }
+
+      prevScrollpos = currentScrollPos;
     });
 
 
