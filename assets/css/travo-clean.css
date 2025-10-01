@@ -912,6 +912,7 @@ html body header .slicknav_btn {
     width: 100%;
     height: 100%;
     background: rgba(10, 25, 47, 0.65);
+    opacity: 80%;
     z-index: 1;
 }
 
