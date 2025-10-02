@@ -999,11 +999,11 @@ html body header .slicknav_icon-bar {
 }
 
 .hero-stats {
-    background: transparent;
-    backdrop-filter: none;
-    border-radius: 0;
-    padding: 0;
-    border: none;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    border: none !important;
     margin-left: 0 !important;
     margin-top: 40px;
 }
@@ -1405,19 +1405,19 @@ html body header .slicknav_icon-bar {
 }
 
 .metric-item {
-    background: var(--white);
-    padding: 20px;
-    border-radius: 8px;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: none;
+    transition: none;
     height: 100%;
     width: 100%;
 }
 
 .metric-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(254, 85, 51, 0.15);
+    transform: none;
+    box-shadow: none;
 }
 
 .metric-item h4 {
@@ -1465,7 +1465,108 @@ html body header .slicknav_icon-bar {
     font-family: serif;
 }
 
+/* ================================================================
+   19A. HERITAGE TIMELINE CARDS
+   ================================================================ */
+.timeline-card {
+    background: transparent !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
 
+.timeline-image {
+    background: transparent !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* ================================================================
+   19B. LEBANON LOCATION PAGE OPTIMIZATIONS
+   ================================================================ */
+.companies-section .company-card {
+    padding: 15px !important;
+}
+
+.companies-section .company-card > div:first-child {
+    padding: 15px !important;
+}
+
+.companies-section .company-card > div:last-child {
+    padding: 15px !important;
+}
+
+.companies-section .company-card > div:first-child > div:first-child {
+    width: 60px !important;
+    height: 60px !important;
+    margin: 0 auto 10px !important;
+}
+
+.companies-section .company-card h3 {
+    font-size: 1.1rem !important;
+    margin-bottom: 5px !important;
+}
+
+.companies-section .company-card h5 {
+    font-size: 0.9rem !important;
+    margin-bottom: 8px !important;
+}
+
+.companies-section .company-card p {
+    margin-bottom: 10px !important;
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+}
+
+.companies-section .company-card ul {
+    margin-bottom: 10px !important;
+    font-size: 0.85rem !important;
+    line-height: 1.6 !important;
+}
+
+.companies-section .company-card ul li {
+    margin-bottom: 3px !important;
+}
+
+.projects-section .project-card > div:first-child {
+    height: 140px !important;
+}
+
+.projects-section .project-card > div:last-child {
+    padding: 15px !important;
+}
+
+.projects-section .project-card h5 {
+    font-size: 1.05rem !important;
+    margin-bottom: 8px !important;
+}
+
+.projects-section .project-card p {
+    font-size: 0.85rem !important;
+    margin-bottom: 8px !important;
+    line-height: 1.5 !important;
+}
+
+.markets-section .market-card {
+    background: transparent !important;
+    padding: 20px !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* ================================================================
+   19C. TRADE PARTNERS - PREQUALIFICATION CRITERIA
+   ================================================================ */
+section[style*="background-color: #fdeeea"] .col-md-6 > div {
+    background: transparent !important;
+    padding: 20px 0 !important;
+    border-radius: 0 !important;
+    border-left: none !important;
+}
 
 /* ================================================================
    20. LOCATION CARDS & MAP
