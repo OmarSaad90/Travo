@@ -2191,6 +2191,42 @@ section[style*="background-color: #fdeeea"] .col-md-6 > div {
         max-width: 100vw !important;
     }
 
+    /* Center Featured Projects heading and button on mobile */
+    .project-area .project-heading .row {
+        text-align: center !important;
+    }
+
+    .project-area .project-heading .col-lg-6 {
+        text-align: center !important;
+    }
+
+    .project-area .properties__button {
+        text-align: center !important;
+        margin-top: 15px !important;
+    }
+
+    /* Center Our Capabilities heading and subtitle on mobile */
+    .services-area1 .section-tittle {
+        text-align: center !important;
+    }
+
+    .services-area1 .section-tittle h2 {
+        text-align: center !important;
+    }
+
+    .services-area1 .section-subtitle {
+        text-align: center !important;
+    }
+
+    /* Center Safety & Quality Excellence heading on mobile */
+    .safety-quality-area .section-tittle {
+        text-align: center !important;
+    }
+
+    .safety-quality-area .section-tittle h2 {
+        text-align: center !important;
+    }
+
     /* Fix header and hamburger menu positioning */
     .header-area .header-bottom {
         position: relative !important;
