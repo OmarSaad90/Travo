@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="manifest" href="site.webmanifest">
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 		<!-- CSS here -->
             <link rel="stylesheet" href="assets/css/bootstrap.min.css">
             <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
@@ -577,37 +578,13 @@
                 </div>
 
                 <!-- Interactive Map Placeholder -->
-                <div class="row mb-60">
-                    <div class="col-lg-12">
-                        <div class="map-container" style="background-color: #fdeeea; border-radius: 10px; padding: 60px 30px; text-align: center; position: relative;">
-                            <div class="map-placeholder">
-                                <i class="fas fa-map-marked-alt" style="color: #fe5533; font-size: 80px; margin-bottom: 20px;"></i>
-                                <h4 style="color: #464242; margin-bottom: 15px;">Interactive Regional Map</h4>
-                                <p style="color: #464242;">Operations spanning Lebanon, Oman, UAE, and expanding to Qatar</p>
-
-                                <!-- Map Markers -->
-                                <div class="map-markers">
-                                    <div class="marker beirut" style="position: absolute; top: 40px; left: 45%; transform: translateX(-50%);">
-                                        <i class="fas fa-map-marker-alt" style="color: #fe5533; font-size: 24px;"></i>
-                                        <span style="font-size: 12px; color: #464242; display: block; margin-top: 5px;">Beirut</span>
-                                    </div>
-                                    <div class="marker muscat" style="position: absolute; bottom: 40px; right: 30%; transform: translateX(50%);">
-                                        <i class="fas fa-map-marker-alt" style="color: #fe5533; font-size: 24px;"></i>
-                                        <span style="font-size: 12px; color: #464242; display: block; margin-top: 5px;">Muscat</span>
-                                    </div>
-                                    <div class="marker dubai" style="position: absolute; bottom: 50px; right: 35%; transform: translateX(50%);">
-                                        <i class="fas fa-map-marker-alt" style="color: #fe5533; font-size: 24px;"></i>
-                                        <span style="font-size: 12px; color: #464242; display: block; margin-top: 5px;">Dubai</span>
-                                    </div>
-                                    <div class="marker qatar" style="position: absolute; bottom: 45px; right: 40%; transform: translateX(50%);">
-                                        <i class="fas fa-map-marker-alt" style="color: #d9c487; font-size: 24px;"></i>
-                                        <span style="font-size: 12px; color: #464242; display: block; margin-top: 5px;">Qatar (Soon)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="col-lg-12">
+    <div style="text-align: center; margin-bottom: 30px;">
+        <h4 style="color: #464242; margin-bottom: 15px;">Interactive Regional Map</h4>
+        <p style="color: #464242;">Operations spanning Lebanon, Oman, UAE, and expanding to Qatar</p>
+    </div>
+    <div id="map" style="height: 300px;margin-bottom: 50px; border-radius: 10px;"></div>
+</div>
 
                 <!-- Location Cards -->
                 <div class="row">
@@ -1042,6 +1019,27 @@
 		<!-- Jquery Plugins, main Jquery -->	
         <script src="./assets/js/plugins.js"></script>
         <script src="./assets/js/main.js"></script>
+     <script>
+    // Initialize map first
+    const map = L.map('map');
+    
+    // Use CartoDB tiles (English, cleaner design)
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap, © CartoDB'
+    }).addTo(map);
+    
+    // Add markers
+    const beirut = L.marker([33.8547, 35.8623]).addTo(map).bindPopup('Beirut');
+    const muscat = L.marker([23.5880, 58.3829]).addTo(map).bindPopup('Muscat');
+    const dubai = L.marker([25.2048, 55.2708]).addTo(map).bindPopup('Dubai');
+    const qatar = L.marker([25.3548, 51.1839]).addTo(map).bindPopup('Qatar (Coming Soon)');
+    
+    // Fit map to show all markers
+    const group = L.featureGroup([beirut, muscat, dubai, qatar]);
+    map.fitBounds(group.getBounds().pad(0.1));
+    
+    setTimeout(() => map.invalidateSize(), 100);
+</script>
         
     </body>
 </html>
